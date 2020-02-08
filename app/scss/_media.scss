@@ -1,34 +1,10 @@
-// MEDIA queries
 
-// 0-600px: Phone
-// 600-900: Taablet
-// 1200-1800 normal style
-// 1800 ++ desctop
-/*
-$breackpoint argument choices:
- - phone
- - tab-portrait
- - tab- land
- -desktop
-
- 1em ==16px
- */
-//  @mixin respons($breackpoint) {
-//      @if $breackpoint == phone{
-//          @media(max-width: 37.5em) {@content}}; //600px
-//      @if $breackpoint == tab-portrait{
-//          @media(max-width: 56.25em) {@content}}; //900px
-//      @if $breackpoint == land{
-//          @media(max-width: 75em) {@content}}; //1200px
-//      @if $breackpoint == deskctop{
-//          @media(min-width: 112.5em) {@content}}; //1800px
-//  }
-@media(max-width:76.87em){
+@media(max-width:76.87em){ //1230px
     html{
         font-size:56.25% ;
     }
 }
-@media(max-width:68.75em){
+@media(max-width:68.75em){ //1100px
  
    .updates-notify__subscribe{
        width: 100%;
@@ -44,12 +20,15 @@ $breackpoint argument choices:
        width: 70%;
    }
 }
-@media(max-width:56.25em){
+@media(max-width:56.25em){  //900px
+    .hero {
+        background-image: url(../img/hero_bg-small.png);
+    }
    .features__card{
        width: 30%;
    }
 }
-@media(max-width: 45em){
+@media(max-width: 45em){ //720px
    .features__cards{
        flex-wrap: wrap;
        flex-direction: column;
@@ -60,7 +39,7 @@ $breackpoint argument choices:
        margin-bottom: 2rem;
    }
 }
-@media(max-width: 37.5em){
+@media(max-width: 37.5em){ //568px
     .hero{
         padding-bottom:9.3rem;
     }

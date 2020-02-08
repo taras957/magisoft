@@ -1,0 +1,83 @@
+// MEDIA queries
+
+// 0-600px: Phone
+// 600-900: Taablet
+// 1200-1800 normal style
+// 1800 ++ desctop
+/*
+$breackpoint argument choices:
+ - phone
+ - tab-portrait
+ - tab- land
+ -desktop
+
+ 1em ==16px
+ */
+//  @mixin respons($breackpoint) {
+//      @if $breackpoint == phone{
+//          @media(max-width: 37.5em) {@content}}; //600px
+//      @if $breackpoint == tab-portrait{
+//          @media(max-width: 56.25em) {@content}}; //900px
+//      @if $breackpoint == land{
+//          @media(max-width: 75em) {@content}}; //1200px
+//      @if $breackpoint == deskctop{
+//          @media(min-width: 112.5em) {@content}}; //1800px
+//  }
+@media(max-width:76.87em){
+    html{
+        font-size:56.25% ;
+    }
+}
+@media(max-width:68.75em){
+ 
+   .updates-notify__subscribe{
+       width: 100%;
+       margin: 0 auto;
+       text-align: center;
+       margin-bottom: 3rem;
+   }
+   .updates-notify__text{
+    text-align: center;
+   }
+   .upadates-notify__video{
+       margin: 0 auto;
+       width: 70%;
+   }
+}
+@media(max-width:56.25em){
+   .features__card{
+       width: 30%;
+   }
+}
+@media(max-width: 45em){
+   .features__cards{
+       flex-wrap: wrap;
+       flex-direction: column;
+       align-items: center;
+   }
+      .features__card{
+       width: 100%;
+       margin-bottom: 2rem;
+   }
+}
+@media(max-width: 37.5em){
+    .hero{
+        padding-bottom:9.3rem;
+    }
+    .hero__text{
+        text-align: center;
+    }
+    .hero__img{
+        display: none;
+    }
+    .hero__download{
+        justify-content: center;
+    }
+
+    .footer__nav-list{
+        max-height: 80px;
+          flex-direction: column; 
+        flex-wrap: wrap
+    }
+
+}

@@ -114,13 +114,12 @@ body {
     justify-content: space-between;
 }
 
-.features__card {
+.card {
     max-width: 322px;
     width: 33%;
     text-align: center;
 }
-
-.features__card-img {
+.card__img {
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
@@ -132,7 +131,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.features__card-title {
+.card__title {
     margin-bottom: 2rem;
 }
 
@@ -143,7 +142,7 @@ body {
     font-size: 5.2rem;
 }
 
-.features__card-text {
+.card__text {
     text-align: center;
 }
 
@@ -193,7 +192,9 @@ body {
     width: 69%;
     padding-left: 3rem;
 }
-
+.upadate-notify__input:focus{
+    outline: none;
+}
 
 .updates-notify__title {
     padding-bottom: 2.2rem;

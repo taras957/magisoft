@@ -16,6 +16,29 @@
   color: inherit;
 }
 
+.visually-hidden {
+  /* Удаляем элемент из потока документа */
+  position: absolute;
+  /* Временное решение для неверно произносимого, размазанного текста */
+  white-space: nowrap;
+  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+  width: 1px;
+  height: 1px;
+  /* Скрываем вылезающий за границы контент */
+  overflow: hidden;
+  /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
+  border: 0;
+  padding: 0;
+  /* Вырезаем ту часть контента, которая должна отображаться. */
+  /* Устаревшее свойство clip для старых браузеров */
+  clip: rect(0 0 0 0);
+  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+  margin: -1px;
+}
+
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello.eot");
@@ -231,13 +254,13 @@ body {
           justify-content: space-between;
 }
 
-.features__card {
+.card {
   max-width: 322px;
   width: 33%;
   text-align: center;
 }
 
-.features__card-img {
+.card__img {
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
@@ -255,7 +278,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.features__card-title {
+.card__title {
   margin-bottom: 2rem;
 }
 
@@ -266,7 +289,7 @@ body {
   font-size: 5.2rem;
 }
 
-.features__card-text {
+.card__text {
   text-align: center;
 }
 
@@ -324,6 +347,10 @@ body {
   height: 5.5rem;
   width: 69%;
   padding-left: 3rem;
+}
+
+.upadate-notify__input:focus {
+  outline: none;
 }
 
 .updates-notify__title {
@@ -496,6 +523,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .contacts__social-item:hover {
@@ -533,15 +561,6 @@ body {
   margin-right: 40px;
 }
 
-/*
-$breackpoint argument choices:
- - phone
- - tab-portrait
- - tab- land
- -desktop
-
- 1em ==16px
- */
 @media (max-width: 76.87em) {
   html {
     font-size: 56.25%;
@@ -565,6 +584,9 @@ $breackpoint argument choices:
 }
 
 @media (max-width: 56.25em) {
+  .hero {
+    background-image: url(../img/hero_bg-small.png);
+  }
   .features__card {
     width: 30%;
   }

@@ -138,4 +138,3 @@ calc1.calcStart();
 
 
 
-module.exports = { sum };
